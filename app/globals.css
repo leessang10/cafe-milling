@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendardvariable.woff2")
+      format("woff2-variations");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 1 999;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-cream: #f5efe6;
+  --color-cream-muted: #f2e7d7;
+  --color-deep-cream: #ede4d4;
+  --color-brown: #5c3a2e;
+  --color-brown-dark: #4a2f24;
+  --color-brown-text: #3d2b1f;
+  --color-cream-text: #fffaf0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  * {
+    @apply antialiased;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-brown-text);
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  section {
+    scroll-margin-top: 6rem;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-brown) 20%, transparent);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .font-pretendard {
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Helvetica Neue", Apple SD Gothic Neo, "Noto Sans KR", sans-serif;
+  }
+
+  .bg-cream {
+    background-color: var(--color-cream);
+  }
+
+  .bg-cream\/95 {
+    background-color: color-mix(
+      in srgb,
+      var(--color-cream) 95%,
+      transparent
+    );
+  }
+
+  .bg-deep-cream {
+    background-color: var(--color-deep-cream);
+  }
+
+  .bg-brown {
+    background-color: var(--color-brown);
+  }
+
+  .bg-brown-dark {
+    background-color: var(--color-brown-dark);
+  }
+
+  .bg-brown\/10 {
+    background-color: color-mix(
+      in srgb,
+      var(--color-brown) 10%,
+      transparent
+    );
+  }
+
+  .bg-hero-pattern {
+    background-color: var(--color-cream-muted);
+    background-image: linear-gradient(
+        180deg,
+        rgba(245, 239, 230, 0.9),
+        rgba(245, 239, 230, 0.85)
+      ),
+      url("/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .text-cream {
+    color: var(--color-cream-text);
+  }
+
+  .text-brown {
+    color: var(--color-brown-text);
+  }
+
+  .text-brown\/60 {
+    color: color-mix(in srgb, var(--color-brown-text) 60%, transparent);
+  }
+
+  .text-brown\/70 {
+    color: color-mix(in srgb, var(--color-brown-text) 70%, transparent);
+  }
+
+  .text-brown\/75 {
+    color: color-mix(in srgb, var(--color-brown-text) 75%, transparent);
+  }
+
+  .text-brown\/80 {
+    color: color-mix(in srgb, var(--color-brown-text) 80%, transparent);
+  }
+
+  .text-brown\/85 {
+    color: color-mix(in srgb, var(--color-brown-text) 85%, transparent);
+  }
+
+  .border-brown {
+    border-color: var(--color-brown);
+  }
+
+  .border-brown\/10 {
+    border-color: color-mix(in srgb, var(--color-brown) 10%, transparent);
+  }
+
+  .focus-visible\:outline-brown:focus-visible {
+    outline-color: var(--color-brown);
+  }
+
+  .hover\:text-brown-dark:hover {
+    color: var(--color-brown-dark);
+  }
+
+  .hover\:bg-brown\/10:hover {
+    background-color: color-mix(
+      in srgb,
+      var(--color-brown) 10%,
+      transparent
+    );
+  }
+
+  .hover\:bg-brown-dark:hover {
+    background-color: var(--color-brown-dark);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 24px 40px -32px rgba(61, 43, 31, 0.35);
+  }
 }

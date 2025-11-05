@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cafe Milling
 
-## Getting Started
+카페 밀링의 반응형 브런치 카페 랜딩 페이지입니다. Next.js(App Router)와 TailwindCSS를 사용해 구축했으며, Vercel 배포를 가정합니다.
 
-First, run the development server:
+## 기술 스택
+- Next.js 15 (App Router, React 19)
+- TypeScript
+- TailwindCSS 4
 
+## 로컬 개발
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+개발 서버는 기본적으로 `http://localhost:3000`에서 실행됩니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 프로덕션 빌드
+```bash
+pnpm build
+pnpm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`pnpm start`는 빌드 산출물을 기반으로 프로덕션 서버를 구동합니다.
 
-## Learn More
+## 코드 품질
+- `pnpm lint`로 ESLint를 실행할 수 있습니다.
 
-To learn more about Next.js, take a look at the following resources:
+## 배포 (Vercel)
+1. [Vercel CLI](https://vercel.com/docs/cli)를 설치합니다.
+2. `vercel login`으로 로그인합니다.
+3. 프로젝트 루트에서 `vercel`을 실행해 새 프로젝트를 연결하거나 기존 프로젝트에 링크합니다.
+4. 이후 `vercel --prod`로 프로덕션 배포를 진행합니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+루트의 `vercel.json`은 SPA 라우팅을 위한 리라이트 설정을 포함합니다.
