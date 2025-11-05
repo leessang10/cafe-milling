@@ -25,8 +25,8 @@ export const Footer = () => {
                 업체 정보
               </h3>
               <p>사업자등록번호: 000-00-00000</p>
-              <p>대표자: 홍길동</p>
-              <p>주소: 서울 어딘가 123, 1층</p>
+              <p>대표자: 김정은</p>
+              <p>주소: 경기도 수원시 팔달구 화서문로71번길 14, 1층</p>
             </div>
             <div className="space-y-2">
               <h3 className="text-base font-semibold text-brown">연락처</h3>

@@ -25,7 +25,7 @@ export const MapSection = () => {
             <div>
               <h3 className="text-lg font-semibold">주소</h3>
               <p className="mt-1 text-sm text-brown/75">
-                서울 어딘가 123, 1층 (카페 밀링)
+                경기도 수원시 팔달구 화서문로71번길 14, 1층 (카페 밀링)
               </p>
             </div>
             <div>
@@ -45,7 +45,7 @@ export const MapSection = () => {
           <div className="overflow-hidden rounded-3xl border border-brown/10 shadow-soft">
             <iframe
               title="카페 밀링 위치"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.764342102483!2d127.02758397602558!3d37.49960197206998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca14a382d4b61%3A0xd5db26d0f4dd6a76!2z7ISc7Jq47Yq567OE7IucIOyKpOumrOuvvOumrA!5e0!3m2!1sko!2skr!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.3681243841015!2d127.01576969999998!3d37.2864083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5ccb02917a6d%3A0xf59e9cf7f7139cc8!2z6rK96riw64-EIOyImOybkOyLnCDtjJTri6zqtawg7ZmU7ISc66y466GcNzHrsojquLggMTQ!5e0!3m2!1sko!2skr!4v1762320527059!5m2!1sko!2skr"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="h-[320px] w-full"
