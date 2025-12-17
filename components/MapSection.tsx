@@ -60,7 +60,7 @@ export const MapSection = () => {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.3681243841015!2d127.01576969999998!3d37.2864083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5ccb02917a6d%3A0xf59e9cf7f7139cc8!2z6rK96riw64-EIOyImOybkOyLnCDtjJTri6zqtawg7ZmU7ISc66y466GcNzHrsojquLggMTQ!5e0!3m2!1sko!2skr!4v1762320527059!5m2!1sko!2skr"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-[320px] w-full"
+              className="h-100 w-full"
               allowFullScreen
             />
           </div>
