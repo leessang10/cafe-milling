@@ -30,10 +30,22 @@ export const MapSection = () => {
             </div>
             <div>
               <h3 className="text-lg font-semibold">대중교통</h3>
-              <p className="mt-1 text-sm text-brown/75">
-                지하철 2호선 카페역 3번 출구 도보 5분. 버스 123, 456, 789
-                이용시 카페 밀링 정류장에서 하차.
-              </p>
+              <div className="mt-1 space-y-2 text-sm text-brown/75">
+                <p>
+                  <span className="font-semibold text-brown">버스 정류장</span>
+                  <br />
+                  장안문·수원전통문화관 (01-155 / 01-153)
+                </p>
+                <p>
+                  <span className="font-semibold text-brown">지하철</span>
+                  <br />
+                  수원역(1호선/수인분당선): 수원역.AK플라자 정류장에서 버스 환승 후
+                  장안문·수원전통문화관 정류장 하차 (약 15~20분 소요)
+                  <br />
+                  화서역(1호선): 화서역 정류장에서 3번, 8번 버스 승차 후
+                  장안문·수원전통문화관 하차 (약 20분 소요)
+                </p>
+              </div>
             </div>
             <div>
               <h3 className="text-lg font-semibold">주차 안내</h3>

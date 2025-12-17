@@ -34,11 +34,11 @@ export const Hero = () => {
           id="hero-heading"
           className="text-5xl font-bold leading-tight text-brown sm:text-6xl md:text-7xl"
         >
-          엄마가 차려주신 브런치
+          엄마의 마음을 담아 차린 한 상
         </h1>
         <div className="flex flex-col gap-2">
           <p className="text-xl text-brown/85 sm:text-2xl">
-            매일 아침, 엄마의 마음을 담아 차린 한 상
+            집밥이 생각나는 브런치
           </p>
           <p className="text-sm text-brown/60 sm:text-base">
             Home-cooked comfort, lovingly prepared
