@@ -3,7 +3,7 @@ import { Notice } from "@/types";
 const notices: Notice[] = [
   {
     title: "라스트 오더",
-    description: "브런치 19:00 / 음료 20:00",
+    description: "모든 메뉴 라스트오더 19:00",
   },
   {
     title: "원두 정보",
@@ -40,16 +40,12 @@ export const HoursNotice = () => {
           <div className="rounded-3xl border border-brown/10 bg-cream p-8 shadow-soft">
             <dl className="grid gap-4 text-brown">
               <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                <dt className="text-lg font-semibold">평일</dt>
-                <dd className="text-base text-brown/80">10:00 – 20:00</dd>
-              </div>
-              <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                <dt className="text-lg font-semibold">주말</dt>
-                <dd className="text-base text-brown/80">09:00 – 21:00</dd>
+                <dt className="text-lg font-semibold">운영 시간</dt>
+                <dd className="text-base text-brown/80">매일 11:00 – 20:00</dd>
               </div>
               <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                 <dt className="text-lg font-semibold">정기 휴무</dt>
-                <dd className="text-base text-brown/80">매주 화요일</dd>
+                <dd className="text-base text-brown/80">매주 월요일</dd>
               </div>
             </dl>
           </div>

@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { MenuGrid } from "@/components/MenuGrid";
+import { Gallery } from "@/components/Gallery";
 import { HoursNotice } from "@/components/HoursNotice";
 import { MapSection } from "@/components/MapSection";
 import { Footer } from "@/components/Footer";
@@ -13,6 +14,7 @@ export const App = () => {
       <main>
         <Hero />
         <MenuGrid />
+        <Gallery />
         <HoursNotice />
         <MapSection />
       </main>

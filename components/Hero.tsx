@@ -10,9 +10,21 @@ export const Hero = () => {
   return (
     <section
       id="top"
-      className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-hero-pattern text-brown"
+      className="relative flex min-h-[70vh] items-center justify-center overflow-hidden text-brown"
       aria-labelledby="hero-heading"
     >
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/video/poster.jpg"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/video/카페밀링_움.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-t from-[#f5efe6] via-[#f5efe6cc] to-transparent" />
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center gap-6 px-6 py-16 text-center sm:items-start sm:text-left">
         <p className="text-sm uppercase tracking-[0.3em] text-brown/70">

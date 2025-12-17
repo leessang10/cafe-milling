@@ -77,7 +77,7 @@ App.tsx
 •	사업자등록번호: 000-00-00000
 •	대표자: 김정은
 •	주소: 경기도 수원시 팔달구 화서문로71번길 14
-•	Instagram: https://instagram.com/cafemilling
+•	Instagram: https://www.instagram.com/cafe_milling/
 
 산출물
 •	위 구조 전체 파일의 실제 코드.

@@ -1,15 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import type { MouseEvent } from "react";
 import { scrollToId } from "@/lib/scroll";
 
 const navigation = [
   { label: "메뉴", href: "#today-brunch" },
+  { label: "갤러리", href: "#gallery" },
   { label: "오시는 길", href: "#location" },
   {
     label: "인스타그램",
-    href: "https://instagram.com/cafemilling",
+    href: "https://www.instagram.com/cafe_milling/",
     external: true,
   },
 ];
@@ -31,9 +33,16 @@ export const Header = () => {
         <Link
           href="#top"
           onClick={handleInternalNav("#top")}
-          className="text-lg font-semibold tracking-tight text-brown transition-colors hover:text-brown-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brown"
+          className="transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brown"
         >
-          카페 밀링
+          <Image
+            src="/logo/cafemilling_logo.svg"
+            alt="카페 밀링"
+            width={120}
+            height={40}
+            priority
+            className="h-8 w-auto sm:h-10"
+          />
         </Link>
         <nav aria-label="주요 메뉴">
           <ul className="flex items-center gap-3 sm:gap-6 text-sm font-medium text-brown">

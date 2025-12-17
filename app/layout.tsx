@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og.png",
+        url: "/logo/카페밀링.jpeg",
         width: 1200,
         height: 630,
-        alt: "카페 밀링 브런치 테이블",
+        alt: "카페 밀링",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "카페 밀링",
     description:
       "브런치와 커피가 가장 맛있는 시간, 카페 밀링에서 만나보세요.",
-    images: ["/og.png"],
+    images: ["/logo/카페밀링.jpeg"],
   },
   alternates: {
     canonical: "/",
@@ -53,8 +53,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    name: "카페 밀링",
+    image: "https://cafemilling.vercel.app/logo/카페밀링.jpeg",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "화서문로71번길 14, 1층",
+      addressLocality: "수원시",
+      addressRegion: "경기도",
+      addressCountry: "KR",
+    },
+    servesCuisine: ["브런치", "커피"],
+    priceRange: "₩₩",
+  };
+
   return (
     <html lang="ko" className="bg-cream">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="font-pretendard antialiased text-brown">{children}</body>
     </html>
   );

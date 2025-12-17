@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const Footer = () => {
   return (
@@ -9,12 +10,17 @@ export const Footer = () => {
       <div className="mx-auto w-full max-w-6xl px-6 py-12">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div className="max-w-md">
-            <h2
-              id="footer-heading"
-              className="text-lg font-semibold text-brown"
-            >
+            <h2 id="footer-heading" className="sr-only">
               카페 밀링
             </h2>
+            <Image
+              src="/logo/cafemilling_logo.svg"
+              alt="카페 밀링"
+              width={100}
+              height={32}
+              loading="lazy"
+              className="mb-3"
+            />
             <p className="mt-3 text-sm text-brown/75">
               브런치와 커피가 가장 맛있는 시간, 카페 밀링에서 느껴보세요.
             </p>
@@ -24,16 +30,16 @@ export const Footer = () => {
               <h3 className="text-base font-semibold text-brown">
                 업체 정보
               </h3>
-              <p>사업자등록번호: 000-00-00000</p>
+              <p>사업자등록번호: 675-57-00910</p>
               <p>대표자: 김정은</p>
               <p>주소: 경기도 수원시 팔달구 화서문로71번길 14, 1층</p>
             </div>
             <div className="space-y-2">
               <h3 className="text-base font-semibold text-brown">연락처</h3>
-              <p>전화: 02-000-0000</p>
-              <p>이메일: hello@cafemilling.kr</p>
+              <p>전화: 070-4060-7550</p>
+              <p>이메일: cafe.milling@gmail.com</p>
               <Link
-                href="https://instagram.com/cafemilling"
+                href="https://www.instagram.com/cafe_milling/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-brown underline-offset-4 transition-colors hover:text-brown-dark hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brown"

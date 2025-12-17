@@ -38,7 +38,7 @@ export const MapSection = () => {
             <div>
               <h3 className="text-lg font-semibold">주차 안내</h3>
               <p className="mt-1 text-sm text-brown/75">
-                건물 지하 1층 주차장 이용 가능 (1시간 무료).
+                건물 1층 (총 4대). 공간이 협소하니 인근 공영주차장을 이용해 주세요.
               </p>
             </div>
           </div>
