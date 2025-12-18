@@ -41,7 +41,6 @@ export const Hero = () => {
         ref={videoRef}
         autoPlay
         muted
-        defaultMuted
         loop
         playsInline
         preload="auto"
