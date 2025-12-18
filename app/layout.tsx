@@ -4,19 +4,24 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://cafemilling.vercel.app"),
   title: {
-    default: "카페 밀링 | Cafe Milling",
+    default: "카페 밀링 | 엄마의 마음을 담은 집밥 브런치",
     template: "%s | 카페 밀링",
   },
   description:
-    "카페 밀링에서 즐기는 프리미엄 브런치와 신선한 커피. 서울 브런치 카페, 카페 밀링.",
+    "엄마의 마음을 담아 정성껏 준비한 집밥 브런치와 신선한 커피. 수원 팔달구 화서문로71번길 14. 매일 11:00-20:00, 월요일 휴무.",
   applicationName: "카페 밀링",
   keywords: [
     "카페 밀링",
     "Cafe Milling",
-    "서울 브런치 카페",
-    "브런치",
-    "카페",
-    "커피",
+    "수원 브런치 카페",
+    "수원 카페",
+    "집밥 브런치",
+    "쌈밥 브런치",
+    "김치볶음밥",
+    "칼국수",
+    "프렌치토스트",
+    "수원 팔달구 카페",
+    "화서문로 카페",
   ],
   authors: [{ name: "카페 밀링" }],
   icons: {
@@ -25,28 +30,28 @@ export const metadata: Metadata = {
     apple: "/logo/cafemilling_logo.svg",
   },
   openGraph: {
-    title: "카페 밀링 — 브런치와 커피가 가장 맛있는 시간",
+    title: "카페 밀링 — 엄마의 마음을 담아 차린 한 상",
     description:
-      "매일 아침 직접 준비하는 브런치와 신선한 원두를 만나보세요.",
+      "집밥이 생각나는 브런치와 신선한 원두. 정성스럽게 준비한 쌈밥 브런치, 김치볶음밥, 칼국수, 프렌치토스트를 만나보세요.",
     url: "https://cafemilling.vercel.app",
     siteName: "카페 밀링",
     locale: "ko_KR",
     type: "website",
     images: [
       {
-        url: "/logo/카페밀링.jpeg",
+        url: "https://cafemilling.vercel.app/logo/%EC%B9%B4%ED%8E%98%EB%B0%80%EB%A7%81.jpeg",
         width: 1200,
         height: 630,
-        alt: "카페 밀링",
+        alt: "카페 밀링 - 엄마의 마음을 담은 집밥 브런치",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "카페 밀링",
+    title: "카페 밀링 — 엄마의 마음을 담은 집밥 브런치",
     description:
-      "브런치와 커피가 가장 맛있는 시간, 카페 밀링에서 만나보세요.",
-    images: ["/logo/카페밀링.jpeg"],
+      "집밥이 생각나는 브런치와 신선한 커피. 수원 팔달구에서 만나보세요.",
+    images: ["https://cafemilling.vercel.app/logo/%EC%B9%B4%ED%8E%98%EB%B0%80%EB%A7%81.jpeg"],
   },
   alternates: {
     canonical: "/",
@@ -62,16 +67,35 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: "카페 밀링",
-    image: "https://cafemilling.vercel.app/logo/카페밀링.jpeg",
+    alternateName: "Cafe Milling",
+    description: "엄마의 마음을 담아 정성껏 준비한 집밥 브런치와 신선한 커피",
+    image: "https://cafemilling.vercel.app/logo/%EC%B9%B4%ED%8E%98%EB%B0%80%EB%A7%81.jpeg",
     address: {
       "@type": "PostalAddress",
       streetAddress: "화서문로71번길 14, 1층",
-      addressLocality: "수원시",
+      addressLocality: "수원시 팔달구",
       addressRegion: "경기도",
+      postalCode: "16458",
       addressCountry: "KR",
     },
-    servesCuisine: ["브런치", "커피"],
+    servesCuisine: ["한식 브런치", "집밥", "커피"],
     priceRange: "₩₩",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "11:00",
+        closes: "20:00",
+      },
+    ],
+    menu: "https://cafemilling.vercel.app#today-brunch",
   };
 
   return (
