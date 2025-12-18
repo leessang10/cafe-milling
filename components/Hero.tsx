@@ -20,7 +20,7 @@ export const Hero = () => {
         loop
         playsInline
         preload="metadata"
-        poster="/video/poster.jpg"
+        poster="/photo/카페밀링_천장모빌_빨강분홍_디테일.jpg"
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/video/아크릴_움.mp4" type="video/mp4" />
