@@ -23,7 +23,7 @@ export const Hero = () => {
         poster="/video/poster.jpg"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/video/카페밀링_움.mp4" type="video/mp4" />
+        <source src="/video/아크릴_움.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-t from-[#f5efe6] via-[#f5efe6cc] to-transparent" />
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 px-6 py-20 text-center">
