@@ -1,11 +1,34 @@
 "use client";
 
 import { scrollToId } from "@/lib/scroll";
+import { useEffect, useRef } from "react";
 
 export const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   const handleScroll = (target: string) => () => {
     scrollToId(target);
   };
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = true;
+
+    const tryPlay = () => {
+      video.play().catch(() => {
+        /* Ignore autoplay errors; some browsers need a retry */
+      });
+    };
+
+    tryPlay();
+    video.addEventListener("canplay", tryPlay);
+
+    return () => {
+      video.removeEventListener("canplay", tryPlay);
+    };
+  }, []);
 
   return (
     <section
@@ -15,15 +38,18 @@ export const Hero = () => {
     >
       {/* Video Background */}
       <video
+        ref={videoRef}
         autoPlay
         muted
+        defaultMuted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         poster="/photo/카페밀링_천장모빌_빨강분홍_디테일.jpg"
         className="absolute inset-0 h-full w-full object-cover"
+        aria-hidden="true"
       >
-        <source src="/video/아크릴_움.mp4" type="video/mp4" />
+        <source src="/video/acryl-woom.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-t from-[#f5efe6] via-[#f5efe6cc] to-transparent" />
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 px-6 py-20 text-center">
