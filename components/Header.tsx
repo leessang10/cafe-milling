@@ -9,11 +9,6 @@ const navigation = [
   { label: "메뉴", href: "#today-brunch" },
   { label: "갤러리", href: "#gallery" },
   { label: "오시는 길", href: "#location" },
-  {
-    label: "인스타그램",
-    href: "https://www.instagram.com/cafe_milling/",
-    external: true,
-  },
 ];
 
 export const Header = () => {
@@ -45,13 +40,13 @@ export const Header = () => {
               className="h-8 w-auto sm:h-10"
             />
           </Link>
-          <Image
-            src="/logo/cafemilling_logo3.svg"
-            alt="카페 밀링"
-            width={80}
-            height={24}
-            className="h-5 w-auto opacity-60 sm:h-6"
-          />
+          {/*<Image*/}
+          {/*  src="/logo/cafemilling_logo3.svg"*/}
+          {/*  alt="카페 밀링"*/}
+          {/*  width={80}*/}
+          {/*  height={24}*/}
+          {/*  className="h-5 w-auto opacity-60 sm:h-6"*/}
+          {/*/>*/}
         </div>
         <nav aria-label="주요 메뉴">
           <ul className="flex items-center gap-3 sm:gap-6 text-sm font-medium text-brown">
