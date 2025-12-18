@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const pretendard = localFont({
+  src: "../node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cafemilling.vercel.app"),
@@ -99,7 +107,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="ko" className="bg-cream">
+    <html lang="ko" className={`bg-cream ${pretendard.variable}`}>
       <head>
         <script
           type="application/ld+json"
