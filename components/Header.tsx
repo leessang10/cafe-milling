@@ -9,6 +9,11 @@ const navigation = [
   { label: "메뉴", href: "#today-brunch" },
   { label: "갤러리", href: "#gallery" },
   { label: "오시는 길", href: "#location" },
+  {
+    label: "인스타그램",
+    href: "https://www.instagram.com/cafe_milling/",
+    external: true,
+  },
 ];
 
 export const Header = () => {
