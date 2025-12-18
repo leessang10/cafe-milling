@@ -30,20 +30,29 @@ export const Header = () => {
   return (
     <header className="sticky inset-x-0 top-0 z-50 bg-cream/95 backdrop-blur border-b border-brown/10">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link
-          href="#top"
-          onClick={handleInternalNav("#top")}
-          className="transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brown"
-        >
+        <div className="flex items-center gap-3">
+          <Link
+            href="#top"
+            onClick={handleInternalNav("#top")}
+            className="transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brown"
+          >
+            <Image
+              src="/logo/cafemilling_logo.svg"
+              alt="카페 밀링"
+              width={120}
+              height={40}
+              priority
+              className="h-8 w-auto sm:h-10"
+            />
+          </Link>
           <Image
-            src="/logo/cafemilling_logo.svg"
+            src="/logo/cafemilling_logo3.svg"
             alt="카페 밀링"
-            width={120}
-            height={40}
-            priority
-            className="h-8 w-auto sm:h-10"
+            width={80}
+            height={24}
+            className="h-5 w-auto opacity-60 sm:h-6"
           />
-        </Link>
+        </div>
         <nav aria-label="주요 메뉴">
           <ul className="flex items-center gap-3 sm:gap-6 text-sm font-medium text-brown">
             {navigation.map(({ label, href, external }) => (

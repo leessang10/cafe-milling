@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "커피",
   ],
   authors: [{ name: "카페 밀링" }],
+  icons: {
+    icon: "/logo/cafemilling_logo.svg",
+    shortcut: "/logo/cafemilling_logo.svg",
+    apple: "/logo/cafemilling_logo.svg",
+  },
   openGraph: {
     title: "카페 밀링 — 브런치와 커피가 가장 맛있는 시간",
     description:
