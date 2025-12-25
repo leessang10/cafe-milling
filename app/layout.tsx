@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 
 const pretendard = localFont({
@@ -113,6 +114,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TX9YL6NVJ3"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-gtag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-TX9YL6NVJ3');`}
+        </Script>
       </head>
       <body className="font-pretendard antialiased text-brown">{children}</body>
     </html>
